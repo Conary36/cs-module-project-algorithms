@@ -9,7 +9,7 @@ def single_number(arr):
     # set new array to collect single integers
     result = arr[0]
     # loop over array and store
-    for i in range(len(arr)):
+    for i in range(1, len(arr)):
         result ^= arr[i]
     return result
 
