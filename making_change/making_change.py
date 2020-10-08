@@ -6,14 +6,12 @@ import sys
 def making_change(amount, denominations):
     # Your code here
     #  check if input is small, or large amount.
-    if amount >= 1:
-      denominations = [*args]
-      #  denominations are a list of Integers  chosen by user.
-      #  return the value from dividing the amount by the denominations
 
-
-
-    pass
+    if amount >= denominations:
+        #  denominations are a list of Integers  chosen by user.
+        #  return the value from dividing the amount by the denominations
+        val = amount / denominations
+        return val
 
 
 if __name__ == "__main__":

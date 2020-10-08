@@ -6,8 +6,9 @@ Returns: a List of integers
 
 def sliding_window_max(nums, k):
     # Your code here
-
-    pass
+    N = len(nums[k])
+    for i in range(N):
+        return i
 
 
 if __name__ == '__main__':
