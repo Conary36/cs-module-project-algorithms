@@ -10,9 +10,9 @@ def product_of_all_other_numbers(arr):
     product = 1
     # All the values of the products stored in a list
     list_of_products = []
-    for i in range(0, len(arr)):  # loop through the array
+    for i in range(0, len(arr) -1):  # loop through the array
         for k in arr:  # for each number in array
-            if k != arr[i]:  # number not equal to iteration in array
+            if k != arr[i]:  # if number not equal to iteration in array
                 product *= k  # multiply the product
         list_of_products.append(product) # add product to new list
         product = 1

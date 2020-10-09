@@ -7,11 +7,13 @@ def making_change(amount, denominations):
     # Your code here
     #  check if input is small, or large amount.
 
-    if amount >= denominations:
-        #  denominations are a list of Integers  chosen by user.
-        #  return the value from dividing the amount by the denominations
-        val = amount / denominations
-        return val
+    for i in range(0, denominations):
+        if amount >= denominations[i]:
+            #  denominations are a list of Integers  chosen by user.
+            #  return the value from the amount by the denominations
+            denominations[i] += denominations[amount - 1]
+
+    return denominations[amount]
 
 
 if __name__ == "__main__":
