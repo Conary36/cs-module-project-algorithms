@@ -5,15 +5,18 @@ import sys
 
 def making_change(amount, denominations):
     # Your code here
-    #  check if input is small, or large amount.
-
-    for i in range(0, denominations):
-        if amount >= denominations[i]:
-            #  denominations are a list of Integers  chosen by user.
-            #  return the value from the amount by the denominations
-            denominations[i] += denominations[amount - 1]
-
-    return denominations[amount]
+    # loop over the length of denominations and store in new list
+    ways_list = [0 for i in range(amount + 1)]
+    ways_list[0] = 1  # Base case start the list with the value of 1
+    # loop over denominations
+    for k in denominations:
+        # in list find for each number starting at 1 increment
+        for num in range(1, amount + 1):
+            # check to see if iteration is less than or equal to each number
+            if k <= num:
+                # increment the value of the denominatio with a decremented value of the iteration
+                ways_list[num] += ways_list[num - k]
+    return ways_list[amount]
 
 
 if __name__ == "__main__":
