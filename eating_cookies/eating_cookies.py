@@ -1,9 +1,13 @@
 '''
 Input: an integer
 Returns: an integer
+
+
+
 '''
 def eating_cookies(n):
     # Your code here
+
 
     pass
 
